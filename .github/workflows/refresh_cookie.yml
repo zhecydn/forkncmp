@@ -2,7 +2,7 @@ name: Refresh Cookie
 
 on:
   schedule:
-    - cron: '0 14 * * 0'  # 每周日UTC 14:00 (北京时间22:00)
+    - cron: '30 21 * * 0'  # 北京时间早上 5:30
   workflow_dispatch:
 
 jobs:
