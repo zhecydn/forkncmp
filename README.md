@@ -73,7 +73,7 @@ ncmp(NetEase Cloud Music Partner/网易云音乐合伙人)
 - `NETEASE_PHONE`: 您的网易云音乐账号手机号
 - 网易云音乐账号密码（2选1，强烈建议使用MD5加密密码）
   - `NETEASE_PASSWORD`: 明文密码
-  - `NETEASE_MD5_PASSWORD`: MD5加密密码
+  - `NETEASE_MD5_PASSWORD`: MD5加密密码32位小写
 - `GH_TOKEN`: 刚才创建的GitHub Token
 
 #### 5. 启用自动刷新工作流
