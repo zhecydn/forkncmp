@@ -80,13 +80,13 @@ class Signer:
             if has_english:
                 score = "4"
             else:
-            r = random.random()
-            if r < 0.6:
-                score = "4"
-            elif r < 0.9:
-                score = "3"
-            else:
-                score = "2"
+                r = random.random()
+                if r < 0.6:
+                    score = "4"
+                elif r < 0.9:
+                    score = "3"
+                else:
+                    score = "2"
         else:  # 不是上面的那就直接固定4分
                 score = "4"
             
