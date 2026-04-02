@@ -76,12 +76,12 @@ class Signer:
             score = "3" if has_english else "2"
         elif score_strategy == 3:  # 3-4分策略（默认）
             score = "4" if has_english else "3"
-        elif score_strategy == 4:# 2-4分随机策略 6成4分,3成3分,1成2分 英语自动4分
+        elif score_strategy == 4:  # 2-4分随机策略 50概率4分,40概率3分,10概率2分 英语歌自动4分
             if has_english:
                 score = "4"
             else:
                 r = random.random()
-                if r < 0.6:
+                if r < 0.5:
                     score = "4"
                 elif r < 0.9:
                     score = "3"
