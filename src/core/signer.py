@@ -78,7 +78,7 @@ class Signer:
             score = "4" if has_english else "3"
         elif score_strategy == 4:  # 2-4分随机策略 50概率4分,40概率3分,10概率2分 英语歌自动5分
             if has_english:
-                score = "5"
+                score = "4"
             else:
                 r = random.random()
                 if r < 0.5:
