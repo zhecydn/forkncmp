@@ -67,7 +67,7 @@ class Signer:
         score_strategy = int(self.config.get("score", 3))
         
         # 检查名称中是否包含英文
-        has_english = bool(self.name_pattern.match(work["name"] + work["authorName"]))
+        has_english = self.name_pattern.match(work["name"]) and self.name_pattern.match(work["authorName"])
         
         # 根据策略和名称决定评分
         if score_strategy == 1:  # 1-2分策略
@@ -78,7 +78,7 @@ class Signer:
             score = "4" if has_english else "3"
         elif score_strategy == 4:  # 2-4分随机策略 50概率4分,40概率3分,10概率2分 英语歌自动5分
             if has_english:
-                score = "4"
+                score = "5"
             else:
                 r = random.random()
                 if r < 0.5:
